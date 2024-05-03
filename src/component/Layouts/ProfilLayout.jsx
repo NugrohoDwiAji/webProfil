@@ -21,19 +21,19 @@ const sosmed = [
   {
     id: 2,
     icon: <FaInstagram color="red" />,
-    link: "https://t.me/nugrohodwiajiF",
+    link: "https://www.instagram.com/nugrohodwiaji_/",
     color: "",
   },
   {
     id: 3,
     icon: <FaFacebookF />,
-    link: "https://t.me/nugrohodwiajiF",
+    link: "",
     color: "text-blue-700",
   },
   {
     id: 4,
     icon: <FaLinkedinIn />,
-    link: "https://t.me/nugrohodwiajiF",
+    link: "https://www.linkedin.com/in/nugroho-dwi-aji-aa61a72a0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BpvnXcTQ0RYuqtRCEDu1A%2Fg%3D%3D",
     color: "text-blue-700",
   },
 ];
@@ -53,7 +53,7 @@ const contacts = [
     title: "Email",
     desc: "nugrohodwiaji@gmail.com",
     iconColor: "text-amber-600",
-    link: "",
+    link: "mailto:nugrohodwiaji@gmail.com",
   },
   {
     id: 3,
