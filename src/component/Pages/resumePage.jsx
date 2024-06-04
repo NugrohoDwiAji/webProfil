@@ -13,13 +13,13 @@ const resume = [
     desc: "S1 Teknologi Informasi - Universitas Bumigora",
     color: "primary",
   },
-  {
-    id: 2,
-    tanggal: "22 Juli 2023 - 8 Oktober 2023",
-    Ket: "Mataram, NTB",
-    desc: "Fullstack Typescript & UI/UX Design - Brida School Academy",
-    color: "secondary",
-  },
+  // {
+  //   id: 2,
+  //   tanggal: "22 Juli 2023 - 8 Oktober 2023",
+  //   Ket: "Mataram, NTB",
+  //   desc: "Fullstack Typescript & UI/UX Design - Brida School Academy",
+  //   color: "secondary",
+  // },
   {
     id: 3,
     tanggal: "16 Februari 2024 - 30 Juni 2024",

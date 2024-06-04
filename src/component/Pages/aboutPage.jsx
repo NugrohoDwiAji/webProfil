@@ -23,8 +23,7 @@ const AboutPage = () => {
               Studi S1 Teknologi Informasi Saya DI Universitas Bumigora Mataram.
               Saya Memiliki Minat Pada Bidang Teknologi (Jaringan Maupun Web
               Development).Saya Merupakan Individu Yang Sehat Dan Pribadi Yang
-              Aktif Berorganisasi Bidang Teknologi. Saya tinggal di Dusun
-              Jambianom, Desa Medana, Kec.Tanjung Kab.Lombok Utara, NTB.
+              Aktif Berorganisasi Bidang Teknologi. Saya tinggal di Kec.Tanjung Kab.Lombok Utara, NTB.
             </p>
           </div>
           <div className="flex flex-col gap-3  ">

@@ -16,7 +16,7 @@ const ContactPage = () => {
         <div className="bg-white w-[40.4rem] h-[27rem]  rounded-t-3xl p-10 overflow-y-auto scrollbar-hide">
           <div>
             <h1 className="flex items-end gap-5 font-semibold text-4xl font-tinne">
-              About <hr className="h-1 w-1/2" />
+              Contact <hr className="h-1 w-1/2" />
             </h1>
             <div className="p-7 bg-gray-100 rounded-xl mt-7">
               <h1 className="text-xl mb-7">I`m Always Open To Discussing</h1>

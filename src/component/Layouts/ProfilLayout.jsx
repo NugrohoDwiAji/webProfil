@@ -10,6 +10,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { BsFillCalendarDateFill } from "react-icons/bs";
+import { BsDownload } from "react-icons/bs";
 
 const sosmed = [
   {
@@ -75,14 +76,14 @@ const contacts = [
 
 const ProfilLayout = () => {
   return (
-    <div className=" bg-white w-[17rem] h-[34rem] rounded-3xl flex flex-col items-center gap-3 ">
+    <div className=" bg-white w-[17rem] h-[36rem] rounded-3xl flex flex-col items-center gap-3 ">
       <img
         src="/profil.jpeg"
         alt="upsss... ada kesalahan"
         className="w-[10rem] bg-red-400 -mt-[5rem] h-[10rem] rounded-3xl"
       />
       <h1 className="text-2xl font-tinne font-semibold">Nugroho Dwi Aji</h1>
-      <h2 className="px-3 py-2 bg-gray-200 rounded-xl">Mahasiswa</h2>
+      <h2 className="px-3 py-2 bg-gray-200 rounded-xl">Mahasiswa | Web Developer</h2>
       <div className="flex justify-evenly gap-2">
         {sosmed.map((item) => (
           <CardSosmed link={item.link} key={item.id} color={item.color}>
@@ -103,6 +104,9 @@ const ProfilLayout = () => {
           />
         ))}
       </div>
+      <button className="h-fit w-fit py-3 px-7 rounded-lg bg-primary500 hover:scale-105 text-white flex gap-4 items-center justify-center">
+      <BsDownload />Download CV
+      </button>
     </div>
   );
 };

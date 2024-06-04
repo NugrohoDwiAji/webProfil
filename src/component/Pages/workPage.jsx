@@ -6,13 +6,13 @@ import Navbar from "../Navbar";
 const galery = [
   {
     id: 1,
-    img: "/airku.jpg",
-    desc: "Website airku adalah website yang dibuat menggunakaan react typescript dan nextjs.",
+    img: "/siu.png",
+    desc: "Sistem informasi UKM adalah sistem yang bertujuan untuk mempermudah akses informasi dan registrasi bagi calon anggota UKM",
   },
   {
     id: 2,
-    img: "/profilWeb.png",
-    desc: "Website profil pribadi adalah website yang dibuat menggunakaan html murni dan boostrap. Web ini adalah web pertama saya",
+    img: "/webPorto.png",
+    desc: "Website Portofolio adalah Web yang bertujuan Untuk memberi informasi tentang data diri.",
   },
 ];
 
@@ -25,7 +25,7 @@ const WorkPage = () => {
         <div className="bg-white w-[40.4rem] h-[27rem] rounded-t-3xl p-10 overflow-y-auto scrollbar-hide ">
           <div>
             <h1 className="flex items-end gap-5 font-semibold text-4xl font-tinne">
-              Portofolio <hr className="h-1 w-1/2" />
+              Project <hr className="h-1 w-1/2" />
             </h1>
            <div className="flex flex-wrap gap-10 mt-10">
             {galery.map((item)=>(
