@@ -19,11 +19,13 @@ const AboutPage = () => {
             </h1>
             <p className="text-justify">
               {" "}
-              Saya Adalah Seorang Mahasiswa. Saat Ini Saya Sedang Menyelesaikan
-              Studi S1 Teknologi Informasi Saya DI Universitas Bumigora Mataram.
-              Saya Memiliki Minat Pada Bidang Teknologi (Jaringan Maupun Web
-              Development).Saya Merupakan Individu Yang Sehat Dan Pribadi Yang
-              Aktif Berorganisasi Bidang Teknologi. Saya tinggal di Kec.Tanjung Kab.Lombok Utara, NTB.
+              Mahasiswa program studi S1 Teknologi Informasi
+              Universitas Bumigora dengan pengalaman organisasi pada bidang
+              teknologi dan jaringan. Selain aktif dalam kegiatan organisasi,
+              memiliki pengalaman dalam bidang perancangan, pembuatan dan
+              pengembangan Web Devleopment. Memiliki minat untuk berkarir
+              dibidang Web Development baik dalam bidang front-end maupun
+              back-end.
             </p>
           </div>
           <div className="flex flex-col gap-3  ">
@@ -49,7 +51,7 @@ const AboutPage = () => {
               </CardKemampuan>
             </div>
           </div>
-          <Copyright/>
+          <Copyright />
         </div>
       </div>
     </div>

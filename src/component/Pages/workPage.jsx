@@ -7,12 +7,12 @@ const galery = [
   {
     id: 1,
     img: "/siu.png",
-    desc: "Sistem informasi UKM adalah sistem yang bertujuan untuk mempermudah akses informasi dan registrasi bagi calon anggota UKM",
+    desc: "Sistem informasi UKM adalah Project masive di infinite Learning. Sistem ini bertujuan untuk mempermudah akses informasi dan registrasi bagi calon anggota UKM",
   },
   {
     id: 2,
     img: "/webPorto.png",
-    desc: "Website Portofolio adalah Web yang bertujuan Untuk memberi informasi tentang data diri.",
+    desc: "Website Portofolio adalah Tugas Tech dari Infinite Learning. Web ini bertujuan Untuk memberi informasi tentang data diri.",
   },
 ];
 
