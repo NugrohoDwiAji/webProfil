@@ -1,5 +1,7 @@
 import CardSosmed from "../CardSosmed";
 import CardContact from "../CardContact";
+import axios from "axios";
+import { useState } from "react";
 
 // icon
 import { RiWhatsappFill } from "react-icons/ri";
@@ -39,6 +41,8 @@ const sosmed = [
   },
 ];
 
+
+
 const contacts = [
   {
     id: 1,
@@ -75,6 +79,22 @@ const contacts = [
 ];
 
 const ProfilLayout = () => {
+
+  const [data, setdata] = useState({})
+
+
+  const getLocation = () =>{
+    try {
+      axios.get("https://get.geojs.io/v1/ip/geo.json").then(response => {
+
+        setdata(response.data)
+        console.log(data)
+      })
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }
   return (
     <div className=" bg-white w-[17rem] h-[36rem] rounded-3xl flex flex-col items-center gap-3 ">
       <img
@@ -104,7 +124,7 @@ const ProfilLayout = () => {
           />
         ))}
       </div>
-      <button className="h-fit w-fit py-3 px-7 rounded-lg bg-primary500 hover:scale-105 text-white flex gap-4 items-center justify-center">
+      <button className="h-fit w-fit py-3 px-7 rounded-lg bg-primary500 hover:scale-105 text-white flex gap-4 items-center justify-center" onClick={getLocation()}>
       <BsDownload />Download CV
       </button>
     </div>
