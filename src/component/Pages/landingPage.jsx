@@ -1,22 +1,31 @@
-import { NavLink } from "react-router-dom";
-import ProfilLayout from "../Layouts/ProfilLayout";
-import React, { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-const LandingPage = () => {
+export default function SplashScreen({ onFinish }) {
+  const [isVisible, setIsVisible] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const delay = setTimeout(() => {
-    navigate('/about')
-    }, 2000); // Ubah delay sesuai kebutuhan (dalam milidetik)
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+      onFinish && onFinish();
+      navigate("/about");
+    }, 3000);
+  }, [onFinish]);
 
-    return () => clearTimeout(delay);
-  }, [navigate]);
+  if (!isVisible) return null;
+
   return (
-    <div className="h-screen w-screen gap-10 flex flex-col justify-center items-center text-5xl font-bold text-secondary500">
-       <h1 className="animate-bounce">Wellcome To My Web Profil...!</h1>
+    <div className="fixed inset-0 flex items-center justify-center">
+      <motion.img
+        src="/logo.png"
+        alt="Logo"
+        className="w-32 h-32"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.5, yoyo: Infinity }}
+      />
     </div>
   );
-};
-export default LandingPage;
+}

@@ -4,6 +4,7 @@ import { IoPersonOutline } from "react-icons/io5";
 import { FaRegFileAlt } from "react-icons/fa";
 import { MdWorkOutline } from "react-icons/md";
 import { MdOutlineContactPhone } from "react-icons/md";
+import { BiSolidFoodMenu } from "react-icons/bi";
 
 const menus = [
   { id: "about", title: "About", icon: <IoPersonOutline size={32} /> },
@@ -14,7 +15,7 @@ const menus = [
 
 const Navbar = () => {
   return (
-    <div className="bg-white h-28 w-[27rem] rounded-3xl flex justify-evenly items-center">
+    <div className="bg-white w-full mt-10 md:mt-0  h-24 md:h-28 md:w-[27rem] md:rounded-3xl rounded-xl flex justify-evenly items-center">
       {menus.map((item, key) => (
         <CardMenu id={item.id} title={item.title} icon={item.icon} key={key}/>
       ))}

@@ -1,25 +1,44 @@
 import Copyright from "../Copyright";
 import ProfilLayout from "../Layouts/ProfilLayout";
 import Navbar from "../Navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import SlidingCard from "../SlidingCard";
 
 const ContactPage = () => {
   const [nama, setNama] = useState(false);
   const [email, setEmail] = useState(false);
   const [massage, setMassage] = useState(false);
 
+  
+  const [isPhone, setPhone] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setPhone(true);
+      } else {
+        setPhone(false);
+      }
+    }
+    
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="min-h-screen max-w-full flex items-end justify-center gap-[1.88rem] gradien ">
-      <ProfilLayout />
+    <div className=" min-h-screen max-w-full flex md:items-end justify-center md:gap-[1.88rem] gradien transition-all">
+       {isPhone?  <SlidingCard /> : <ProfilLayout /> }
       <div className="flex flex-col gap-[1.88rem] items-end">
         <Navbar />
-        <div className="bg-white w-[40.4rem] h-[27rem]  rounded-t-3xl p-10 overflow-y-auto scrollbar-hide">
+        <div className="bg-white w-[23rem] lg:w-[40.4rem] lg:h-[27rem] rounded-t-3xl p-5 lg:p-10 overflow-y-auto scrollbar-hide">
           <div>
-            <h1 className="flex items-end gap-5 font-semibold text-4xl font-tinne">
+            <h1 className="flex items-end gap-5 font-semibold text-2xl lg:text-4xl font-tinne">
               Contact <hr className="h-1 w-1/2" />
             </h1>
             <div className="p-7 bg-gray-100 rounded-xl mt-7">
-              <h1 className="text-xl mb-7">I`m Always Open To Discussing</h1>
+              <h1 className="text-lg lg:text-xl mb-7">I`m Always Open To Discussing</h1>
               <form action="" className="flex flex-col w-full ">
                 <label
                   htmlFor="nama"

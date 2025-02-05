@@ -83,24 +83,24 @@ const ProfilLayout = () => {
   const [data, setdata] = useState({})
 
 
-  const getLocation = () =>{
-    try {
-      axios.get("https://get.geojs.io/v1/ip/geo.json").then(response => {
+  // const getLocation = () =>{
+  //   try {
+  //     axios.get("https://get.geojs.io/v1/ip/geo.json").then(response => {
 
-        setdata(response.data)
-        console.log(data)
-      })
-    } catch (error) {
-      console.log(error)
-    }
+  //       setdata(response.data)
+  //       console.log(data)
+  //     })
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
     
-  }
+  // }
   return (
     <div className=" bg-white w-[17rem] h-[36rem] rounded-3xl flex flex-col items-center gap-3 ">
       <img
         src="/profil.jpeg"
         alt="upsss... ada kesalahan"
-        className="w-[10rem] bg-red-400 -mt-[5rem] h-[10rem] rounded-3xl"
+        className=" bg-red-400 md:-mt-[5rem] h-[10rem] rounded-3xl"
       />
       <h1 className="text-2xl font-tinne font-semibold">Nugroho Dwi Aji</h1>
       <h2 className="px-3 py-2 bg-gray-200 rounded-xl">Mahasiswa | Web Developer</h2>
@@ -124,7 +124,7 @@ const ProfilLayout = () => {
           />
         ))}
       </div>
-      <button className="h-fit w-fit py-3 px-7 rounded-lg bg-primary500 hover:scale-105 text-white flex gap-4 items-center justify-center" onClick={getLocation()}>
+      <button className="h-fit w-fit py-3 px-7 rounded-lg bg-primary500 hover:scale-105 text-white flex gap-4 items-center justify-center">
       <BsDownload />Download CV
       </button>
     </div>

@@ -4,6 +4,8 @@ import ProfilLayout from "../Layouts/ProfilLayout";
 import Navbar from "../Navbar";
 import { MdCastForEducation } from "react-icons/md";
 import SkilBar from "../SkilBar";
+import { useState, useEffect } from "react";
+import SlidingCard from "../SlidingCard";
 
 const resume = [
   {
@@ -13,18 +15,18 @@ const resume = [
     desc: "S1 Teknologi Informasi - Universitas Bumigora",
     color: "primary",
   },
-  // {
-  //   id: 2,
-  //   tanggal: "22 Juli 2023 - 8 Oktober 2023",
-  //   Ket: "Mataram, NTB",
-  //   desc: "Fullstack Typescript & UI/UX Design - Brida School Academy",
-  //   color: "secondary",
-  // },
+  {
+    id: 2,
+    tanggal: "22 Juli 2023 - 8 Oktober 2023",
+    Ket: "Mataram, NTB",
+    desc: "Fullstack Typescript & UI/UX Design - Brida School Academy",
+    color: "secondary",
+  },
   {
     id: 3,
     tanggal: "16 Februari 2024 - 30 Juni 2024",
     Ket: "Daring",
-    desc: "Web Developer - Infinite Learning",
+    desc: "Fullstack Javascript & UI/UX Design - Infinite Learning",
     color: "primary",
   },
 ];
@@ -46,14 +48,33 @@ const knowlage = [
 ];
 
 const ResumePage = () => {
+
+
+  const [isPhone, setPhone] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setPhone(true);
+      } else {
+        setPhone(false);
+      }
+    }
+    
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="min-h-screen max-w-full flex items-end justify-center gap-[1.88rem] gradien ">
-      <ProfilLayout />
+    <div className=" lg:min-h-screen lg:max-w-full flex items-end justify-center md:gap-[1.88rem] gradien transition-all">
+      {isPhone?  <SlidingCard /> : <ProfilLayout /> }
       <div className="flex flex-col gap-[1.88rem] items-end">
         <Navbar />
-        <div className="bg-white w-[40.4rem] h-[27rem] rounded-t-3xl px-10 py-10 overflow-y-auto scrollbar-hide">
+        <div className="bg-white w-[23rem] lg:w-[40.4rem] lg:h-[27rem] rounded-t-3xl p-5 lg:p-10 overflow-y-auto scrollbar-hide">
           <div className="flex flex-col gap-3 mb-5">
-            <h1 className="flex items-end gap-5 font-semibold text-4xl font-tinne">
+            <h1 className="flex items-end gap-5 font-semibold text-2xl lg:text-4xl font-tinne">
               Resume
               <hr className="h-1 w-1/2" />
             </h1>
@@ -61,7 +82,7 @@ const ResumePage = () => {
               <h1 className="font-tinne text-gray-700 text-2xl flex [&>svg]:text-primary500 gap-2 items-center">
                 <MdCastForEducation /> Education
               </h1>
-              <div className="flex flex-wrap gap-7">
+              <div className="flex flex-wrap gap-7 justify-center md:justify-start">
                 {resume.map((item) => (
                   <CardResume
                     tanggal={item.tanggal}
@@ -74,7 +95,7 @@ const ResumePage = () => {
                 ))}
               </div>
             </section>
-            <div className="flex gap-12">
+            <div className="flex flex-col md:flex-row gap-12">
               <section>
                 <h1 className="font-tinne text-gray-700 text-2xl flex items-center mb-4">
                   Skills

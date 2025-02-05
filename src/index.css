@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   background: linear-gradient(to bottom right, rgba(0, 210, 230, 0.67) 0%, rgba(0, 210, 230, 0.15) 9.77%, rgba(51, 161, 235, 0.24) 19.77%, rgba(0, 210, 230, 0.16) 29.11%, rgba(51, 161, 235, 0.27) 43.07%, rgba(0, 210, 230, 0.27) 58.11%, rgba(51, 161, 235, 0.35) 69.48%, rgba(0, 210, 230, 0.10) 100%);
   background-repeat: no-repeat;
