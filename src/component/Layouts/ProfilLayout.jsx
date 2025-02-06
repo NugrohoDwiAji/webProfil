@@ -124,9 +124,11 @@ const ProfilLayout = () => {
           />
         ))}
       </div>
-      <button className="h-fit w-fit py-3 px-7 rounded-lg bg-primary500 hover:scale-105 text-white flex gap-4 items-center justify-center">
+      <a href="/CV-nugroho-dwi-aji.pdf" download="CV-nugroho-dwi-aji.pdf">
+      <button  className="h-fit w-fit py-3 px-7 rounded-lg bg-primary500 hover:scale-105 text-white flex gap-4 items-center justify-center">
       <BsDownload />Download CV
       </button>
+      </a>
     </div>
   );
 };
